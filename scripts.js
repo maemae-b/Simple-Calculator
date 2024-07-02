@@ -19,3 +19,16 @@ for (btn of ALL_NUMS) {
     
     btn.addEventListener("click", inputText);
 };
+
+// upon pressing operation buttons
+const ALL_OPERATIONS = Array.from(document.querySelectorAll(".operation"));
+
+for (btn of ALL_OPERATIONS) {
+    let text = btn.textContent;
+    
+    function inputText() {
+        INPUT.textContent += text;
+    };
+    
+    btn.addEventListener("click", inputText);
+};
