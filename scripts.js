@@ -3,14 +3,14 @@ let num2 = 0;
 let sum = 0;
 let operation;
 
-// DOM
+// DISPLAYS
 const EXPRESSION = document.querySelector("#expression");
 const INPUT = document.querySelector("#input");
 
 // map buttons so they correspond to display
-const ALL_BTNS = Array.from(document.querySelectorAll("button"));
+const ALL_NUMS = Array.from(document.querySelectorAll(".number"));
 
-for (btn of ALL_BTNS) {
+for (btn of ALL_NUMS) {
     let text = btn.textContent;
     
     function inputText() {
