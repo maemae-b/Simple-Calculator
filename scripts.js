@@ -39,22 +39,25 @@ for (btn of ALL_OPERATIONS) {
             EXPRESSION.textContent += " " + INPUT.textContent + " " + text;
             INPUT.textContent = "";
             
-            switch (text) {
-                case "÷":
-                    operation = "/";
-                    break;
-                case "×":
-                    operation = "*";
-                    break;
-                case "+":
-                    operation = "+";
-                    break;
-                case "−":
-                    operation = "-";
-            };
+            operation = text;
+            // switch (text) {
+            //     case "÷":
+            //         operation = "/";
+            //         break;
+            //     case "×":
+            //         operation = "*";
+            //         break;
+            //     case "+":
+            //         operation = "+";
+            //         break;
+            //     case "−":
+            //         operation = "-";
+            // };
         } else {
             EXPRESSION.textContent += " " + INPUT.textContent;
             INPUT.textContent = "";
+            operate();
+            INPUT.textContent = answer;
         };
     };
     
@@ -62,10 +65,29 @@ for (btn of ALL_OPERATIONS) {
 };
 
 // function for equals sign to evaluate EXPRESSION
+// const EQUALS = document.querySelector("#equals");
 
-const EQUALS = document.querySelector("#equals");
-
-// EQUALS.addEventListener(() => {
+// EQUALS.addEventListener("click", () => {
 //     EXPRESSION.textContent += INPUT.textContent;
     
 // });
+
+let answer;
+
+function operate() {
+    num1 = Number(num1);
+    num2 = Number(num2);
+    switch (operation) {
+            case "÷":
+                answer = num1 / num2;
+                break;
+            case "×":
+                answer = num1 * num2;
+                break;
+            case "+":
+                answer = num1 + num2;
+                break;
+            case "−":
+                answer = num1 - num2;
+        };
+};
