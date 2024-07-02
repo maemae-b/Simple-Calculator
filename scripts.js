@@ -20,14 +20,15 @@ for (btn of ALL_NUMS) {
     btn.addEventListener("click", inputText);
 };
 
-// upon pressing operation buttons
+// operation buttons will display INPUT expression in EXPRESSION
 const ALL_OPERATIONS = Array.from(document.querySelectorAll(".operation"));
 
 for (btn of ALL_OPERATIONS) {
     let text = btn.textContent;
     
     function inputText() {
-        INPUT.textContent += text;
+        EXPRESSION.textContent += " " + INPUT.textContent + " " + text;
+        INPUT.textContent = "";
     };
     
     btn.addEventListener("click", inputText);
