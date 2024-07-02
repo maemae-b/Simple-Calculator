@@ -38,21 +38,7 @@ for (btn of ALL_OPERATIONS) {
         if (text !== "=") {
             EXPRESSION.textContent += " " + INPUT.textContent + " " + text;
             INPUT.textContent = "";
-            
             operation = text;
-            // switch (text) {
-            //     case "÷":
-            //         operation = "/";
-            //         break;
-            //     case "×":
-            //         operation = "*";
-            //         break;
-            //     case "+":
-            //         operation = "+";
-            //         break;
-            //     case "−":
-            //         operation = "-";
-            // };
         } else {
             EXPRESSION.textContent += " " + INPUT.textContent;
             INPUT.textContent = "";
@@ -63,14 +49,6 @@ for (btn of ALL_OPERATIONS) {
     
     btn.addEventListener("click", inputText);
 };
-
-// function for equals sign to evaluate EXPRESSION
-// const EQUALS = document.querySelector("#equals");
-
-// EQUALS.addEventListener("click", () => {
-//     EXPRESSION.textContent += INPUT.textContent;
-    
-// });
 
 let answer;
 
