@@ -9,3 +9,13 @@ const INPUT = document.querySelector("#input");
 
 // map buttons so they correspond to display
 const ALL_BTNS = Array.from(document.querySelectorAll("button"));
+
+for (btn of ALL_BTNS) {
+    let text = btn.textContent;
+    
+    function inputText() {
+        INPUT.textContent += text;
+    };
+    
+    btn.addEventListener("click", inputText);
+};
