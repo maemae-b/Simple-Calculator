@@ -1,7 +1,8 @@
 # Simple-Calculator
 
 ## Intro
-STARTED: July 2, 2024
+STARTED: July 2, 2024 
+FINISHED: July 2, 2024 (took 6h20m+)
 
 ## Instructions
 
