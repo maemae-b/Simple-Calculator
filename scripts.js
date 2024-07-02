@@ -73,5 +73,9 @@ const CLEAR = document.querySelector("#clear");
 const ERASE = document.querySelector("#erase");
 
 CLEAR.addEventListener("click", () => {
-
+    num1 = "";
+    num2 = "";
+    operation = "";
+    EXPRESSION.textContent = "";
+    INPUT.textContent = "";
 });
