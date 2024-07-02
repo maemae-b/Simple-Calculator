@@ -3,3 +3,76 @@
 html {
 	box-sizing: border-box;
 }
+
+body {
+    background-color: #b8aa8e;
+}
+
+.container {
+    background-color: #f1f2ec;
+    color: #5a6114;
+
+    padding: 1rem;
+
+    margin: 3rem auto;
+    width: 500px;
+    height: 800px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.display {
+    flex: 1;
+}
+
+.buttons {
+    flex: 3;
+
+    display: flex;
+}
+
+.numbers {
+    flex: 3;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.number {
+    flex: 1 1 calc(33.333% - 10px);
+
+    border-radius: 100%;
+}
+
+.operations {
+    flex: 1;
+
+    padding-left: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.operation {
+    flex: 1;
+
+    color: #963f3f;
+}
+
+button {
+    border: none;
+
+    color: #5a6114;
+    font-size: 1.8rem;
+
+    background-color: #e9ecdb;
+}
+
+button:active {
+    background-color: #7a5738;
+    color: #f1f2ec;
+}
