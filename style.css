@@ -26,21 +26,21 @@ body {
     flex: 1;
 
     display:flex;
-    flex-flow: column wrap;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
     align-items: end;
 }
 
-.expression {
+#expression {
     flex: 1;
 
     font-size: 2rem;
 }
 
-.input {
-    flex: 3;
+#input {
+    flex: 1;
     
-    font-size: 4rem;
+    font-size: 3rem;
 }
 
 .buttons {
