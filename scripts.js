@@ -22,6 +22,7 @@ for (btn of ALL_NUMS) {
 
 // operation buttons will display INPUT expression in EXPRESSION
 const ALL_OPERATIONS = Array.from(document.querySelectorAll(".operation"));
+ALL_OPERATIONS.pop();
 
 for (btn of ALL_OPERATIONS) {
     let text = btn.textContent;
@@ -33,3 +34,12 @@ for (btn of ALL_OPERATIONS) {
     
     btn.addEventListener("click", inputText);
 };
+
+// function for equals sign to evaluate EXPRESSION
+
+const EQUALS = document.querySelector("#equals");
+
+EQUALS.addEventListener(() => {
+    EXPRESSION.textContent += INPUT.textContent
+    EXPRESSION.textContent
+});
