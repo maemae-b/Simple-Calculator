@@ -79,3 +79,10 @@ CLEAR.addEventListener("click", () => {
     EXPRESSION.textContent = "";
     INPUT.textContent = "";
 });
+
+ERASE.addEventListener("click", () => {
+    // let text = INPUT.textContent;
+    let i = INPUT.textContent.length - 1;
+    let text = INPUT.textContent.slice(0, i);
+    INPUT.textContent = text;
+});
