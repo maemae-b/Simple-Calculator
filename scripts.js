@@ -1,6 +1,5 @@
 let num1 = "";
 let num2 = "";
-let sum = "";
 let operation;
 
 // DISPLAYS
@@ -69,3 +68,10 @@ function operate() {
                 answer = num1 - num2;
         };
 };
+
+const CLEAR = document.querySelector("#clear");
+const ERASE = document.querySelector("#erase");
+
+CLEAR.addEventListener("click", () => {
+
+});
