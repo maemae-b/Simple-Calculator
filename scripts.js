@@ -1,6 +1,6 @@
-let num1 = 0;
-let num2 = 0;
-let sum = 0;
+let num1 = "";
+let num2 = "";
+let sum = "";
 let operation;
 
 // DISPLAYS
@@ -22,14 +22,40 @@ for (btn of ALL_NUMS) {
 
 // operation buttons will display INPUT expression in EXPRESSION
 const ALL_OPERATIONS = Array.from(document.querySelectorAll(".operation"));
-ALL_OPERATIONS.pop();
 
 for (btn of ALL_OPERATIONS) {
     let text = btn.textContent;
     
     function inputText() {
-        EXPRESSION.textContent += " " + INPUT.textContent + " " + text;
-        INPUT.textContent = "";
+        // stores num input in variables
+        if (num1 !== "") {
+            num2 = INPUT.textContent;
+        } else {
+            num1 = INPUT.textContent;
+        };
+
+        // displays input num and op to EXPRESSION
+        if (text !== "=") {
+            EXPRESSION.textContent += " " + INPUT.textContent + " " + text;
+            INPUT.textContent = "";
+            
+            switch (text) {
+                case "÷":
+                    operation = "/";
+                    break;
+                case "×":
+                    operation = "*";
+                    break;
+                case "+":
+                    operation = "+";
+                    break;
+                case "−":
+                    operation = "-";
+            };
+        } else {
+            EXPRESSION.textContent += " " + INPUT.textContent;
+            INPUT.textContent = "";
+        };
     };
     
     btn.addEventListener("click", inputText);
@@ -39,7 +65,7 @@ for (btn of ALL_OPERATIONS) {
 
 const EQUALS = document.querySelector("#equals");
 
-EQUALS.addEventListener(() => {
-    EXPRESSION.textContent += INPUT.textContent
-    EXPRESSION.textContent
-});
+// EQUALS.addEventListener(() => {
+//     EXPRESSION.textContent += INPUT.textContent;
+    
+// });
