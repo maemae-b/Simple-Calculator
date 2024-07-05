@@ -28,29 +28,24 @@ const EQUALS = ALL_OPERATIONS.pop();
 for (btn of ALL_OPERATIONS) {
     let text = btn.textContent;
     
-    function inputText() {
-        // stores num input in variables
-        if (num1 !== "") {
-            num2 = INPUT.textContent;
-        } else {
-            num1 = INPUT.textContent;
-        };
-
+    btn.addEventListener("click", () => {
+        num1 = INPUT.textContent;
+        
         // displays input num and op to EXPRESSION
-        if (text !== "=") {
-            EXPRESSION.textContent += " " + INPUT.textContent + " " + text;
-            INPUT.textContent = "";
-            operation = text;
-        } else {
-            EXPRESSION.textContent += " " + INPUT.textContent;
-            INPUT.textContent = "";
-            operate();
-            INPUT.textContent = answer;
-        };
-    };
-    
-    btn.addEventListener("click", inputText);
+        EXPRESSION.textContent += " " + INPUT.textContent + " " + text;
+        INPUT.textContent = "";
+        operation = text;
+    });
 };
+
+EQUALS.addEventListener("click", () => {
+    num2 = INPUT.textContent;
+
+    EXPRESSION.textContent += " " + INPUT.textContent;
+    INPUT.textContent = "";
+    operate();
+    INPUT.textContent = answer;
+});
 
 function operate() {
     num1 = Number(num1);
