@@ -23,6 +23,7 @@ for (btn of ALL_NUMS) {
 
 // operation buttons will display INPUT expression in EXPRESSION
 const ALL_OPERATIONS = Array.from(document.querySelectorAll(".operation"));
+const EQUALS = ALL_OPERATIONS.pop();
 
 for (btn of ALL_OPERATIONS) {
     let text = btn.textContent;
