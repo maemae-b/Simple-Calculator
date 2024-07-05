@@ -35,6 +35,7 @@ for (btn of ALL_OPERATIONS) {
 
         // displays input num and op to EXPRESSION
         if (text !== "=") {
+            
             EXPRESSION.textContent += " " + INPUT.textContent + " " + text;
             INPUT.textContent = "";
             operation = text;
@@ -72,13 +73,15 @@ function operate() {
 const CLEAR = document.querySelector("#clear");
 const ERASE = document.querySelector("#erase");
 
-CLEAR.addEventListener("click", () => {
+function clear() {
     num1 = "";
     num2 = "";
     operation = "";
     EXPRESSION.textContent = "";
     INPUT.textContent = "";
-});
+};
+
+CLEAR.addEventListener("click", clear);
 
 ERASE.addEventListener("click", () => {
     // let text = INPUT.textContent;
