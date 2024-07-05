@@ -2,7 +2,12 @@
 
 ## Intro
 STARTED: July 2, 2024 
-FINISHED: July 2, 2024 (took 6h20m+)
+\brFINISHED: July 2, 2024 (took 6h20m+)
+
+July 6, 2024 fixes:
+    - Limits calculation to two variables.
+    - Properly clears display when pressing on a number after finishing one equation.
+    - Refactored functions.
 
 ## Instructions
 
