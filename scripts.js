@@ -1,6 +1,7 @@
 let num1 = "";
 let num2 = "";
 let operation;
+let answer = "";
 
 // DISPLAYS
 const EXPRESSION = document.querySelector("#expression");
@@ -13,6 +14,7 @@ for (btn of ALL_NUMS) {
     let text = btn.textContent;
     
     function inputText() {
+        if (answer !== "") clear();
         INPUT.textContent += text;
     };
     
@@ -35,7 +37,6 @@ for (btn of ALL_OPERATIONS) {
 
         // displays input num and op to EXPRESSION
         if (text !== "=") {
-            
             EXPRESSION.textContent += " " + INPUT.textContent + " " + text;
             INPUT.textContent = "";
             operation = text;
@@ -49,8 +50,6 @@ for (btn of ALL_OPERATIONS) {
     
     btn.addEventListener("click", inputText);
 };
-
-let answer;
 
 function operate() {
     num1 = Number(num1);
@@ -77,6 +76,7 @@ function clear() {
     num1 = "";
     num2 = "";
     operation = "";
+    answer = "";
     EXPRESSION.textContent = "";
     INPUT.textContent = "";
 };
