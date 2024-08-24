@@ -1,4 +1,4 @@
-# Simple-Calculator
+# [Simple-Calculator](https://maemae-b.github.io/Simple-Calculator/)
 
 ## Intro
 __STARTED:__ July 2, 2024  
